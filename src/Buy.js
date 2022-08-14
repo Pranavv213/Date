@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import {database} from './firebase'
 import './firebase1.css'
+import Card from './Card'
+import './Buy.css'
 function Buy() {
     let handleInput=(event)=>{
         setVal(event.target.value)
@@ -42,20 +44,23 @@ function Buy() {
     const [val,setVal]=useState('')
     const [txt,setTxt]=useState([])
   return (
-    <div>Buy
-        <br></br>
-        <input onChange={handleInput}></input>
-        <button onClick={createUserInDB}>send</button>
-        <br></br>
+    <div>
+       <div class="q1">
+        <textarea class="t1" onChange={handleInput} rows="4" cols="50">
+</textarea>
+<br></br>
+        <button class="b1" onClick={createUserInDB}>post</button>
+      
         {
             txt.map(x=>{
                 return (
-                    <div>
-                        {x}
-                    </div>
+                    
+                    <Card state={x}/>
+                    
                 )
             })
         }
+        </div>
     </div>
   )
 }
