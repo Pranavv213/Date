@@ -65,23 +65,39 @@ function Buy() {
   return (
     <div>
        <div class="q1">
-       <input class="t1" onChange={handleInput1} rows="4" cols="50">
+       <input class="t1" placeholder="whom u want to confess" onChange={handleInput1} rows="4" cols="50">
         </input>
-        <br></br>
-        <textarea class="t1" onChange={handleInput} rows="4" cols="50">
+        
+        <textarea class="t1" placeholder="write ur confessions here" onChange={handleInput} rows="4" cols="50">
 </textarea>
-<br></br>
+
 <div class="b1">
             <button  onClick={refreshChange}>🔃</button>
             <button class="b12" onClick={createUserInDB}>post</button>
 </div>
-        
+        <br></br>
       
         {
             myState.items.map(x=>{
                 return (
-                    
+                    <div>
+                        <div style={{/* From https://css.glass */
+'text-align': 'center',
+'color':'white',
+'width':'5em',
+'background': 'rgba(255, 255, 255, 0.2)',
+'border-radius': '5px',
+'box-shadow': '0 4px 30px rgba(0, 0, 0, 0.1)',
+'backdrop-filter': 'blur(5px)',
+'-webkit-backdrop-filter': 'blur(5px)',
+'border': '1px solid rgba(255, 255, 255, 0.3)'}}>
+                    {/* 💖 &nbsp; <t style={{'color': 'white'}}>reply</t> */}
+                    {x.name}
+                    </div>
                     <Card state={x.name} state1={x.message} state2={x.name}/>
+                    
+                    </div>
+
                     
                 )
             })
