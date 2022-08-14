@@ -4,25 +4,34 @@ import './Card.css'
 import {useSelector, useDispatch} from "react-redux";
 import {incNumber,decNumber} from "./actions/index"
 import './Card.css'
-
+import Card1 from "./Card1"
+import { Link } from 'react-router-dom';
 function Card({state,state1,state2}) {
     
     const myState=useSelector((state)=> state.changethenum)
     const dispatch = useDispatch();
-    const [item,setItem]=useState(state)
+    const [item,setItem]=useState(state.name)
     const [buttonState,setButtonstate]=useState('see')
     const [start,setStart]=useState('yes')
-  
     let handleButton2=()=>{
-      alert(state1)
-    }
 
+      
+      if(buttonState=='see'){
+        setItem(state.message)
+        setButtonstate('back')
+      }
+      else{
+        setItem(state.name)
+        setButtonstate('see')
+      }
+    }
+    
   return (
   
   <div class="div1">
-      {state}
+      {state2}
       &nbsp;&nbsp;&nbsp;
-      <button onClick={handleButton2}>see</button>
+      <button onClick={handleButton2}>{buttonState}</button>
      
   </div>
  

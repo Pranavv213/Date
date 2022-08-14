@@ -10,6 +10,7 @@
         border: 1px solid;
       padding: 10px;
       max-width: 300px;
+      min-width: 300px;
       background-color:yellow;
       margin-bottom: 20px;
       display: flex;
@@ -20,7 +21,14 @@
 }
 .b1{
     max-width: 300px;
+    display: flex;
+    flex-basis: fit-content;
 }
+.b12{
+    width: 270px;
+   
+}
+
     }
 
     @media(min-width:361px)
@@ -33,6 +41,7 @@
         border: 1px solid;
       padding: 10px;
       max-width: 400px;
+      min-width: 300px;
       background-color:yellow;
       margin-bottom: 20px;
       display: flex;
@@ -40,9 +49,16 @@
     }
 .t1{
     max-width: 400px;
+    min-width: 300px;
 }
 .b1{
     max-width: 400px;
+    min-width: 300px;
+    display: flex;
+}
+.b12{
+    width: 370px;
+   
 }
     }
  
@@ -56,6 +72,7 @@
         border: 1px solid;
       padding: 10px;
       max-width: 500px;
+      min-width: 400px;
       background-color:yellow;
       margin-bottom: 20px;
       display: flex;
@@ -63,9 +80,11 @@
     }
 .t1{
     max-width: 500px;
+    min-width: 400px;
 }
 .b1{
     max-width: 500px;
+    min-width: 400px;
 }
     }
 
