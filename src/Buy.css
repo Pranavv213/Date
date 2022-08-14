@@ -70,10 +70,70 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
 }
 .b12{
+    text-align: center;
     width: 370px;
+    border: 1px solid;
+      padding: 10px;
+      background-color:yellow;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.57);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
    
 }
-
+.b12:hover{
+    width: 370px;
+    border: 1px solid;
+      padding: 10px;
+      background-color:yellow;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.57);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgb(252, 48, 119);
+   
+}
+.refresh{
+    border: 1px solid;
+    padding: 10px;
+   
+    background-color:yellow;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.57);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.refresh:hover{
+    border: 1px solid;
+      padding: 10px;
+      
+      background-color:yellow;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.57);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.57);
+    background-color: rgb(252, 48, 119);
+}
     }
  
     @media(min-width:600px)

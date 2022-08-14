@@ -1,17 +1,15 @@
 import React from 'react'
 import {useSelector, useDispatch} from "react-redux";
 import {incNumber,decNumber} from "./actions/index"
-function Card1({q}) {
+function Card2({q1,q2}) {
   const myState=useSelector((state)=> state.changethenum)
   const dispatch = useDispatch();
   return (
     <div>
-      <button onClick={()=>{
-        setButtonState('see')
-      }}>back</button>
-    {q}
+    {q1}
+    
     </div>
   )
 }
 
-export default Card1
+export default Card2

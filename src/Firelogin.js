@@ -80,7 +80,9 @@ function Firelogin({n}) {
      
       {/* <a href="/url">already have an account</a> */}
       {/* {data} */}
+      <div style={{'color':'white'}}>
       {info}
+      </div>
       </div>:<div>
        
         <Buy/></div>}

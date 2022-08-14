@@ -5,7 +5,7 @@ import Card from './Card'
 import './Buy.css'
 import {useSelector, useDispatch} from "react-redux";
 import {incNumber,decNumber} from "./actions/index"
-
+import {Link} from 'react-router-dom'
 function Buy() {
     const myState=useSelector((state)=> state.changethenum)
     const dispatch = useDispatch();
@@ -30,7 +30,7 @@ function Buy() {
            {
                let array=obj.data().arr; 
                let q=obj.data().text
-               q.push({name:name,message:val})
+               q.push({name:name,message:val,likes:0,comments:[]})
                database.users.doc(obj.id).set({name:'docs',arr:array,text:q})
                    
                }
@@ -65,15 +65,15 @@ function Buy() {
   return (
     <div>
        <div class="q1">
-       <input class="t1" placeholder="whom u want to confess" onChange={handleInput1} rows="4" cols="50">
+       <input class="t1" placeholder="name of the person u want to confess" onChange={handleInput1} rows="4" cols="50">
         </input>
         
         <textarea class="t1" placeholder="write ur confessions here" onChange={handleInput} rows="4" cols="50">
 </textarea>
 
 <div class="b1">
-            <button  onClick={refreshChange}>🔃</button>
-            <button class="b12" onClick={createUserInDB}>post</button>
+            <button class="refresh" onClick={refreshChange}>🔃</button>
+            <button  class="b12" onClick={createUserInDB}>post</button>
 </div>
         <br></br>
       
@@ -84,7 +84,7 @@ function Buy() {
                         <div style={{/* From https://css.glass */
 'text-align': 'center',
 'color':'white',
-'width':'5em',
+'min-width':'10em',
 'background': 'rgba(255, 255, 255, 0.2)',
 'border-radius': '5px',
 'box-shadow': '0 4px 30px rgba(0, 0, 0, 0.1)',
@@ -92,9 +92,10 @@ function Buy() {
 '-webkit-backdrop-filter': 'blur(5px)',
 'border': '1px solid rgba(255, 255, 255, 0.3)'}}>
                     {/* 💖 &nbsp; <t style={{'color': 'white'}}>reply</t> */}
+                     To &nbsp;
                     {x.name}
                     </div>
-                    <Card state={x.name} state1={x.message} state2={x.name}/>
+                    <Card state={x.name} state1={x.message} state2={x.comments} state3={x.likes}/>
                     
                     </div>
 

@@ -8,6 +8,7 @@ import Firebase1 from './Firebase1'
 import Firelogin from './Firelogin'
 import Pay from './Pay'
 import Favourites from './Favourites';
+import Card1 from './Card1'
 import 'bootstrap/dist/css/bootstrap.css';
 import {
   BrowserRouter as Router,
@@ -26,7 +27,7 @@ function App() {
           <Route exact path="/buy" component={Buy}/>
           <Route exact path="/url" component={Firestorage}/>
           <Route exact path="/login" component={Firelogin}/>
-          <Route exact path="/favourites" component={Favourites}/>
+          <Route exact path="/Card1" component={Card1}/>
       </Switch>
       </Router>
     </div>
